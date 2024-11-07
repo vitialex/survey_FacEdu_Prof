@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Fac EDU - Profesorado</title>
+    <style>
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #e7ebf2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        div {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 15px;
+            text-align: center;
+            width: 100%;
+            max-width: 320px;
+            border-left: 6px solid #0077c8;
+            box-sizing: border-box;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 15px;
+            text-align: center;
+            width: 320px;
+        }
+
+        h1 {
+            font-size: 22px;
+            color: #005485;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        button {
+            background-color: #0077c8;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        button:hover {
+            background-color: #005485;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 320px;
+            overflow: hidden;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <section class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUELhkCuj1SnTS1c3RWHTdSCi83NPux1NddzYpJbodlwtN1R4f-Nr0lmTDbSVs_OelSQ&usqp=CAU" alt="Logo UIB">
+    </section>
+
+    <div>
+        <h1>Castellano</h1>
+        <p>Elija esta opción si desea responder en castellano la encuesta sobre usos lingüísticos en la Facultad de Educación</p>
+        <button><a href="https://forms.office.com/e/8DuqN9gdSx">Ir a la encuesta</a></button>
+    </div>
+
+    <div>
+        <h1>Català</h1>
+        <p>Triau aquesta opció si voleu respondre en català l'enquesta d'usos lingüístics a la Facultat d'Educació</p>
+        <button><a href="https://forms.office.com/e/4eJkYt5ABd">Anar a la enquesta</a></button>
+    </div>
+
+    <div>
+        <h1>English</h1>
+        <p>Choose this option if you wish to answer in English the survey on language uses at the Faculty of Education</p>
+        <button><a href="https://forms.office.com/e/9YzguCRszW">Go to survey</a></button>
+    </div>
+
+    <script>
+        function shuffleDivs() {
+            const divs = Array.from(document.querySelectorAll('div:not(.logo)')); // No mezclar el logo
+            divs.sort(() => Math.random() - 0.5);
+            divs.forEach(div => document.body.appendChild(div));
+        }
+
+        window.onload = shuffleDivs;
+    </script>
+</body>
+</html>
